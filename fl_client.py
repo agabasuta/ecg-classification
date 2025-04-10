@@ -4,7 +4,7 @@ import argparse
 from torch.utils.data import DataLoader, Subset
 import numpy as np
 
-from models. import get_model
+from models.models2d import MobileNetV2
 from dataloaders.dataset2d import CustomDataset  # Uses 2D ECG images
 from train import train_one_epoch, validate  # Use the train functions from your repo
 
