@@ -1,0 +1,8 @@
+from models.models2d import MobileNetV2
+
+def get_model(name):
+    name = name.lower()
+    if name == "mobilenetv2":
+        return MobileNetV2(num_classes=8)  # Adjust class count if needed
+    # Other model options...
+    raise ValueError(f"Unknown model name: {name}")
