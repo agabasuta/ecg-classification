@@ -1,5 +1,6 @@
 import os
 import os.path as osp
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 from datetime import datetime
 
 import numpy as np
