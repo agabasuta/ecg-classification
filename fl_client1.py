@@ -19,7 +19,7 @@ args = parser.parse_args()
 CLIENT_ID = args.client_id
 
 # Load dataset and partition it based on the client id
-full_dataset = EcgDataset2D("data/train.json", "data/class-mapper.json")
+full_dataset = EcgDataset2D("data/train1.json", "data/class-mapper.json")
 data_len = len(full_dataset)
 indices = np.arange(data_len)
 np.random.seed(42)
