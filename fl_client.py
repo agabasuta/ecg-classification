@@ -6,7 +6,7 @@ import numpy as np
 
 from models.models2d import MobileNetV2
 from dataloaders.dataset2d import EcgDataset2D
-from train import train_one_epoch, validate  # Use the train functions from your repo
+from train import train_one_epoch, validate  # Assuming train.py contains these functions
 
 # Setup
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -19,7 +19,7 @@ args = parser.parse_args()
 CLIENT_ID = args.client_id
 
 # Load dataset and partition it based on the client id
-full_dataset = EcgDataset2D("data/train.json", "data/class-mapper.json")
+full_dataset = EcgDataset2D("data/train4.json", "data/class-mapper.json")
 data_len = len(full_dataset)
 indices = np.arange(data_len)
 np.random.seed(42)
